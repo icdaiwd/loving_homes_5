@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Homes - الخدمات</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-image {
+            height: 55px;
+            width: auto;
+            transition: transform 0.2s;
+        }
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        .logo-text {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: white;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .logo-image { height: 45px; }
+            .logo-text { font-size: 1.4rem; }
+            .logo-link { gap: 8px; }
+        }
+        @media (max-width: 480px) {
+            .logo-image { height: 40px; }
+            .logo-text { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpeg" alt="Loving Homes" class="logo-image">
+                <span class="logo-text">LOVING <span>HOMES</span></span>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="2.html" class="active">الخدمات</a></li>
+    <li><a href="3.html">الحزم</a></li>
+    <li><a href="4.html">تواصل معنا</a></li>
+    <li><a href="5.html">معرض الصور</a></li>
+    <li><a href="6.html">عن الفندق</a></li>
+    <li><a href="7.html">الأسئلة الشائعة</a></li>
+    <li><a href="8.html">قيمنا</a></li>
+</ul>
+        </div>
+    </nav>
+    <section class="section" style="padding-top: 3rem;">
+        <div class="container">
+            <h2>المرافق المقدمة</h2>
+            <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--gray);">نقدم لكلبك أفضل المرافق والخدمات في هونج كونج</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header"><h3>صالة حلاقة ومنتجع</h3></div>
+                    <div class="service-body"><ul><li>حلاقة وتصفيف بأحدث الأدوات</li><li>حمام بخار واسترخاء</li><li>عناية بالأظافر والفرو</li><li>منتجات طبيعية وآمنة</li></ul></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><h3>غرف فاخرة</h3></div>
+                    <div class="service-body"><ul><li>غرف مزودة بتدفئة تحت الأرضية</li><li>غرف مزودة بتبريد تحت الأرضية</li><li>غرف مزودة بتلفزيون وترفيه</li></ul></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><h3>خدمة التوصيل</h3></div>
+                    <div class="service-body"><ul><li>نقل آمن من وإلى الفندق</li><li>سيارات مجهزة بالكامل</li><li>سائقين مدربين على التعامل مع الكلاب</li><li>خدمة التوصيل في جميع أنحاء هونج كونج</li></ul></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><h3>مراعي خارجية آمنة</h3></div>
+                    <div class="service-body"><ul><li>مساحات خضراء واسعة</li><li>أسوار عالية وآمنة</li><li>إشراف مستمر من المدربين</li><li>مناطق مظللة للراحة</li></ul></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><h3>خدمات بيطرية 24 ساعة</h3></div>
+                    <div class="service-body"><ul><li>طبيب بيطري متفرغ</li><li>خدمات طوارئ على مدار الساعة</li><li>تطعيمات دورية</li><li>استشارات صحية مجانية</li></ul></div>
+                </div>
+            </div>
+            <div class="other-facilities-section">
+                <div class="other-facilities-title"><h3>مرافق أخرى</h3><p>خدمات إضافية لراحة كلبك</p></div>
+                <div class="services-grid">
+                    <div class="service-card"><div class="service-header"><h3>مراقبة الحيوانات الأليفة</h3></div><div class="service-body"><ul><li>كاميرات مراقبة في جميع المرافق</li><li>فريق مراقبة متواجد 24/7</li><li>تنبيهات فورية للطوارئ</li><li>تطبيق للمتابعة عن بعد</li></ul></div></div>
+                    <div class="service-card"><div class="service-header"><h3>التمشية في الغابات</h3></div><div class="service-body"><ul><li>رحلات يومية للغابات القريبة</li><li>مجموعات صغيرة آمنة</li><li>مرافقين متخصصين</li><li>توفير مياه ومكافآت</li></ul></div></div>
+                    <div class="service-card"><div class="service-header"><h3>مساحة عشب خاصة</h3></div><div class="service-body"><ul><li>مساحة خاصة للحجز الحصري</li><li>عشب طبيعي معتني به</li><li>خصوصية تامة للكلب</li><li>مناسبة للتدريب واللعب</li></ul></div></div>
+                    <div class="service-card"><div class="service-header"><h3>حظيرة لعب داخلية</h3></div><div class="service-body"><ul><li>مكيفة ومجهزة بالكامل</li><li>ألعاب ذكاء وتحدي</li><li>حواجز إسفنجية آمنة</li><li>أنشطة جماعية منظمة</li></ul></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advice-section">
+        <div class="container">
+            <h2>نصائح إرشادية لكلبك</h2>
+            <p style="color: var(--gray); margin-top: 1rem; font-size: 1rem;">نصائح مخصصة حسب احتياجات كلبك</p>
+            <div class="advice-grid">
+                <div class="advice-card"><div class="advice-icon">🐾</div><h3>للجراء الصغيرة</h3><p>تحتاج الجراء إلى عناية خاصة وتدريب مبكر. ننصح بجلسات قصيرة ومتكررة مع مكافآت تحفيزية.</p></div>
+                <div class="advice-card"><div class="advice-icon">⚡</div><h3>للكلاب النشيطة</h3><p>كلبك يحتاج نشاط يومي مكثف. جرب المشي لمسافات طويلة والألعاب التفاعلية لتفريغ طاقته.</p></div>
+                <div class="advice-card"><div class="advice-icon">🦴</div><h3>للكلاب الكبيرة</h3><p>مع تقدم العمر، تحتاج كلابك لراحة أكثر وأسرة مريحة. ننصح بجلسات مساج لطيفة.</p></div>
+                <div class="advice-card"><div class="advice-icon">💊</div><h3>احتياجات طبية</h3><p>للكلاب ذات الحالات الخاصة، نوفر رعاية بيطرية متكاملة وأدوية حسب الجرعات المحددة.</p></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>LOVING HOMES</h4><p style="color:#aaa;line-height:1.6;">بيتهم الثاني... حيث الحب والرعاية. نقدم أفضل خدمات رعاية الكلاب في هونج كونج - الصين.</p></div>
+                <div class="footer-col"><h4>روابط سريعة</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="2.html">الخدمات</a></li><li><a href="3.html">الحزم</a></li><li><a href="4.html">تواصل معنا</a></li><li><a href="5.html">معرض الصور</a></li><li><a href="6.html">عن الفندق</a></li></ul></div>
+                <div class="footer-col"><h4>خدماتنا</h4><ul><li><a href="2.html">صالة حلاقة</a></li><li><a href="2.html">رعاية بيطرية</a></li><li><a href="2.html">خدمة نقل</a></li><li><a href="2.html">مناطق لعب</a></li></ul></div>
+                <div class="footer-col"><h4>معلومات الاتصال</h4><div class="footer-contact"><p>📍 منطقة الرفاهية، جزيرة هونج كونج - الصين</p><p>📞 +852 1234 5678</p><p>✉️ info@lovinghomes.hk</p></div></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 Loving Homes - هونج كونج، الصين. جميع الحقوق محفوظة.</p></div>
+        </div>
+    </footer>
+    <div class="access-toggle" id="accessToggle">⚙️</div>
+    <div class="access-panel" id="accessPanel">
+        <button class="access-btn" id="zoomIn">🔍+ تكبير</button>
+        <button class="access-btn" id="zoomOut">🔍- تصغير</button>
+        <button class="access-btn" id="resetZoom">🔄 إعادة تعيين</button><hr>
+        <button class="access-btn" id="darkMode">🌙 ليلي</button>
+        <button class="access-btn" id="lightMode">☀️ نهاري</button><hr>
+        <button class="access-btn" id="translateBtn">🌐 ترجمة</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

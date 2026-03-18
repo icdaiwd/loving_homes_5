@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Homes - الحزم</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-image {
+            height: 55px;
+            width: auto;
+            transition: transform 0.2s;
+        }
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        .logo-text {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: white;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .logo-image { height: 45px; }
+            .logo-text { font-size: 1.4rem; }
+            .logo-link { gap: 8px; }
+        }
+        @media (max-width: 480px) {
+            .logo-image { height: 40px; }
+            .logo-text { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpeg" alt="Loving Homes" class="logo-image">
+                <span class="logo-text">LOVING <span>HOMES</span></span>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="2.html">الخدمات</a></li>
+    <li><a href="3.html" class="active">الحزم</a></li>
+    <li><a href="4.html">تواصل معنا</a></li>
+    <li><a href="5.html">معرض الصور</a></li>
+    <li><a href="6.html">عن الفندق</a></li>
+    <li><a href="7.html">الأسئلة الشائعة</a></li>
+    <li><a href="8.html">قيمنا</a></li>
+</ul>
+        </div>
+    </nav>
+    <section class="section section-light" style="padding-top: 3rem;">
+        <div class="container">
+            <h2>الحزم المقدمة</h2>
+            <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--gray);">اختر الحزمة المناسبة لكلبك في هونج كونج</p>
+            <div class="packages-grid">
+                <div class="package-card premium">
+                    <div class="package-badge">الأكثر طلباً</div>
+                    <div class="package-header"><h3>المميزة</h3></div>
+                    <div class="package-body">
+                        <ul><li>المشي 4 مرات / ممارسة 4 أنشطة يومياً</li><li>مساحة عشب خاصة</li><li>تحديثات / صور يومية</li><li>مكافآت (على النحو المتفق عليه مع صاحب الحيوان الأليف)</li></ul>
+                        <a href="4.html" class="btn-gold" style="display:block;text-align:center;margin-top:1rem;">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-header"><h3>الكلاسيكية</h3></div>
+                    <div class="package-body">
+                        <ul><li>المشي 3 مرات / ممارسة 3 أنشطة يومياً</li><li>حظيرة لعب داخلية</li><li>منطقة للاسترخاء</li><li>جلسة حلاقة وتنظيف</li></ul>
+                        <a href="4.html" class="btn-gold" style="display:block;text-align:center;margin-top:1rem;">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="package-header"><h3>اليوم الواحد</h3></div>
+                    <div class="package-body">
+                        <ul><li>المشي مرتين يومياً</li><li>منطقة لعب خارجية</li><li>مسار الرشاقة</li><li>حفر حفرة في الرمل</li></ul>
+                        <a href="4.html" class="btn-gold" style="display:block;text-align:center;margin-top:1rem;">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="packages-descriptions">
+                <div class="package-desc-box premium-desc"><h4>عن الحزمة المميزة</h4><p>مناسبة للكلاب التي تبحث عن أفضل تجربة فاخرة مع عناية خاصة وتواصل يومي مع المالك. تشمل 4 أنشطة يومية ومساحة عشب خاصة وتحديثات مصورة.</p></div>
+                <div class="package-desc-box"><h4>عن الحزمة الكلاسيكية</h4><p>التوازن المثالي بين الراحة والنشاط مع لمسة من العناية الإضافية. 3 أنشطة يومية مع منطقة استرخاء وجلسة حلاقة وتنظيف.</p></div>
+                <div class="package-desc-box"><h4>عن حزمة اليوم الواحد</h4><p>مناسبة لزيارات النهار القصيرة أو كلاب أصحاب العمل الذين يحتاجون رعاية مؤقتة. نشاطان يوميان مع مسار رشاقة ومنطقة لعب خارجية.</p></div>
+            </div>
+            <div class="custom-packages">
+                <h3>حزم مخصصة</h3>
+                <p>تتوفر حزم مخصصة للإقامات الطويلة أو للكلاب ذات المتطلبات الإضافية. يجب على العملاء الاتصال بالشركة لترتيب أي حزم مخصصة.</p>
+                <a href="4.html" class="btn-gold" style="background:var(--gold);color:var(--navy);padding:0.8rem 2.5rem;display:inline-block;">تواصل معنا للحزم المخصصة</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>LOVING HOMES</h4><p style="color:#aaa;line-height:1.6;">بيتهم الثاني... حيث الحب والرعاية. نقدم أفضل خدمات رعاية الكلاب في هونج كونج - الصين.</p></div>
+                <div class="footer-col"><h4>روابط سريعة</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="2.html">الخدمات</a></li><li><a href="3.html">الحزم</a></li><li><a href="4.html">تواصل معنا</a></li><li><a href="5.html">معرض الصور</a></li></ul></div>
+                <div class="footer-col"><h4>خدماتنا</h4><ul><li><a href="2.html">صالة حلاقة</a></li><li><a href="2.html">رعاية بيطرية</a></li><li><a href="2.html">خدمة نقل</a></li><li><a href="2.html">مناطق لعب</a></li></ul></div>
+                <div class="footer-col"><h4>معلومات الاتصال</h4><div class="footer-contact"><p>📍 منطقة الرفاهية، جزيرة هونج كونج - الصين</p><p>📞 +852 1234 5678</p><p>✉️ info@lovinghomes.hk</p></div></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 Loving Homes - هونج كونج، الصين. جميع الحقوق محفوظة.</p></div>
+        </div>
+    </footer>
+    <div class="access-toggle" id="accessToggle">⚙️</div>
+    <div class="access-panel" id="accessPanel">
+        <button class="access-btn" id="zoomIn">🔍+ تكبير</button>
+        <button class="access-btn" id="zoomOut">🔍- تصغير</button>
+        <button class="access-btn" id="resetZoom">🔄 إعادة تعيين</button><hr>
+        <button class="access-btn" id="darkMode">🌙 ليلي</button>
+        <button class="access-btn" id="lightMode">☀️ نهاري</button><hr>
+        <button class="access-btn" id="translateBtn">🌐 ترجمة</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

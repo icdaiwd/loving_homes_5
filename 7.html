@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Homes - الأسئلة الشائعة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-image {
+            height: 55px;
+            width: auto;
+            transition: transform 0.2s;
+        }
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        .logo-text {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: white;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .logo-image { height: 45px; }
+            .logo-text { font-size: 1.4rem; }
+            .logo-link { gap: 8px; }
+        }
+        @media (max-width: 480px) {
+            .logo-image { height: 40px; }
+            .logo-text { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpeg" alt="Loving Homes" class="logo-image">
+                <span class="logo-text">LOVING <span>HOMES</span></span>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="2.html">الخدمات</a></li>
+    <li><a href="3.html">الحزم</a></li>
+    <li><a href="4.html">تواصل معنا</a></li>
+    <li><a href="5.html">معرض الصور</a></li>
+    <li><a href="6.html">عن الفندق</a></li>
+    <li><a href="7.html" class="active">الأسئلة الشائعة</a></li>
+    <li><a href="8.html">قيمنا</a></li>
+</ul>
+        </div>
+    </nav>
+    
+    <section class="section" style="padding-top: 3rem;">
+        <div class="container">
+            <h2>الأسئلة الشائعة</h2>
+            <p style="font-size: 1rem; margin-bottom: 2rem; color: var(--gray);">إجابات عن أكثر الأسئلة التي تهم عملاءنا الكرام</p>
+            
+            <div class="faq-section" style="margin-top: 0;">
+                <div class="faq-container" style="max-width: 900px;">
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>ما هي أوقات العمل؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعمل على مدار الساعة طوال أيام الأسبوع، 24 ساعة. فريقنا متواجد دائماً لخدمتكم.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>كيف يمكنني حجز خدمة لكلبي؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>يمكنك تعبئة نموذج الحجز في صفحة التواصل، وسنقوم بالتواصل معك خلال 24 ساعة لتأكيد الحجز.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>هل يوجد رعاية بيطرية على مدار الساعة؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، يوجد طبيب بيطري متفرغ 24 ساعة طوال أيام الأسبوع لضمان صحة وسلامة كلبك.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>هل يمكنني زيارة كلبي أثناء إقامته؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، يمكنك زيارة كلبك في أي وقت خلال ساعات العمل الرسمية (8 صباحاً - 10 مساءً). نرحب بزيارتك دائماً.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>ماذا تشمل الحزمة المخصصة للإقامات الطويلة؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>الحزمة المخصصة تصمم حسب احتياجات كلبك ومدة الإقامة. نناقش معك التفاصيل ونقدم لك عرضاً مناسباً.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>هل تقبلون جميع سلالات الكلاب؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، نقبل جميع السلالات بشرط أن تكون مطعمة بشكل كامل وأن تكون اجتماعية مع الكلاب الأخرى.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>ما هي متطلبات التطعيمات للإقامة؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نطلب تطعيمات السعار والدستمبر والبارفو والكحة بالإضافة إلى تطعيم الإنفلونزا للكلاب.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>هل توفرون خدمة الاستحمام والحلاقة؟</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، لدينا صالة حلاقة متكاملة ومنتجع للكلاب ضمن الخدمات المتوفرة في الفندق.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--beige); border-radius: 15px;">
+                <h3 style="color: var(--navy); margin-bottom: 1rem;">لم تجد إجابة لسؤالك؟</h3>
+                <p style="color: var(--gray); margin-bottom: 1.5rem;">تواصل معنا مباشرة وسنكون سعداء بمساعدتك</p>
+                <a href="4.html" class="btn-gold">تواصل معنا</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>LOVING HOMES</h4><p style="color:#aaa;line-height:1.6;">بيتهم الثاني... حيث الحب والرعاية. نقدم أفضل خدمات رعاية الكلاب في هونج كونج - الصين.</p></div>
+                <div class="footer-col"><h4>روابط سريعة</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="2.html">الخدمات</a></li><li><a href="3.html">الحزم</a></li><li><a href="4.html">تواصل معنا</a></li><li><a href="5.html">معرض الصور</a></li><li><a href="6.html">عن الفندق</a></li><li><a href="7.html">الأسئلة الشائعة</a></li></ul></div>
+                <div class="footer-col"><h4>خدماتنا</h4><ul><li><a href="2.html">صالة حلاقة</a></li><li><a href="2.html">رعاية بيطرية</a></li><li><a href="2.html">خدمة نقل</a></li><li><a href="2.html">مناطق لعب</a></li></ul></div>
+                <div class="footer-col"><h4>معلومات الاتصال</h4><div class="footer-contact"><p>📍 منطقة الرفاهية، جزيرة هونج كونج - الصين</p><p>📞 +852 1234 5678</p><p>✉️ info@lovinghomes.hk</p></div></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 Loving Homes - هونج كونج، الصين. جميع الحقوق محفوظة.</p></div>
+        </div>
+    </footer>
+    
+    <div class="access-toggle" id="accessToggle">⚙️</div>
+    <div class="access-panel" id="accessPanel">
+        <button class="access-btn" id="zoomIn">🔍+ تكبير</button>
+        <button class="access-btn" id="zoomOut">🔍- تصغير</button>
+        <button class="access-btn" id="resetZoom">🔄 إعادة تعيين</button><hr>
+        <button class="access-btn" id="darkMode">🌙 ليلي</button>
+        <button class="access-btn" id="lightMode">☀️ نهاري</button><hr>
+        <button class="access-btn" id="translateBtn">🌐 ترجمة</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

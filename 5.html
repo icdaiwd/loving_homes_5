@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Homes - معرض الصور</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-image {
+            height: 55px;
+            width: auto;
+            transition: transform 0.2s;
+        }
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+        .logo-text {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: white;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .logo-image { height: 45px; }
+            .logo-text { font-size: 1.4rem; }
+            .logo-link { gap: 8px; }
+        }
+        @media (max-width: 480px) {
+            .logo-image { height: 40px; }
+            .logo-text { font-size: 1.2rem; }
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+            content-visibility: auto;
+            contain-intrinsic-size: 200px;
+        }
+        .gallery-item {
+            cursor: pointer;
+            transition: 0.2s;
+            opacity: 0;
+            animation: fadeIn 0.3s ease forwards;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .gallery-item:nth-child(1) { animation-delay: 0.05s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.15s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.25s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(7) { animation-delay: 0.35s; }
+        .gallery-item:nth-child(8) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(9) { animation-delay: 0.45s; }
+        .gallery-item:nth-child(10) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(11) { animation-delay: 0.55s; }
+        .gallery-item:nth-child(12) { animation-delay: 0.6s; }
+        .gallery-item:nth-child(13) { animation-delay: 0.65s; }
+        .gallery-item:nth-child(14) { animation-delay: 0.7s; }
+        .gallery-item:nth-child(15) { animation-delay: 0.75s; }
+        .gallery-item:nth-child(16) { animation-delay: 0.8s; }
+        .gallery-item:nth-child(17) { animation-delay: 0.85s; }
+        .gallery-item:nth-child(18) { animation-delay: 0.9s; }
+        .gallery-item:nth-child(19) { animation-delay: 0.95s; }
+        .gallery-item:nth-child(20) { animation-delay: 1s; }
+        .gallery-item:nth-child(21) { animation-delay: 1.05s; }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+            background: #e0e0e0;
+        }
+        .gallery-item:hover img {
+            border-bottom-color: var(--gold);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 3px solid var(--gold);
+            animation: zoom 0.2s ease;
+        }
+        @keyframes zoom {
+            from {transform: scale(0.9); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+            transition: 0.2s;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+        }
+        .close:hover {
+            color: var(--gold);
+            background: var(--navy);
+        }
+        #caption {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 20px;
+            background: var(--navy);
+            color: white;
+            border-radius: 30px;
+            font-size: 1rem;
+            border: 2px solid var(--gold);
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.8rem;
+            }
+            .gallery-item img {
+                height: 130px;
+            }
+            #caption {
+                font-size: 0.85rem;
+                padding: 5px 15px;
+                white-space: nowrap;
+                bottom: 20px;
+            }
+            .close {
+                top: 10px;
+                left: 15px;
+                font-size: 30px;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpeg" alt="Loving Homes" class="logo-image">
+                <span class="logo-text">LOVING <span>HOMES</span></span>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="2.html">الخدمات</a></li>
+    <li><a href="3.html">الحزم</a></li>
+    <li><a href="4.html">تواصل معنا</a></li>
+    <li><a href="5.html" class="active">معرض الصور</a></li>
+    <li><a href="6.html">عن الفندق</a></li>
+    <li><a href="7.html">الأسئلة الشائعة</a></li>
+    <li><a href="8.html">قيمنا</a></li>
+</ul>
+        </div>
+    </nav>
+    <div id="imageModal" class="modal" style="display:none;" onclick="closeModalOnClick(event)">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+    <section class="section" style="padding-top:3rem;">
+        <div class="container">
+            <h2>معرض الصور</h2>
+            <p style="font-size:0.95rem;margin-bottom:1.5rem;color:var(--gray);">لحظات من رعاية كلابكم في Loving Homes</p>
+            <div class="other-facilities-title" style="margin-top:2rem;"><h3>كلابنا في المساحات الخضراء</h3><p>أجمل اللحظات في الهواء الطلق</p></div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/1.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">وقت المرح في الحديقة</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/2.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">لحظات سعيدة</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/3.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">اللعب مع الأصدقاء</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/4.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">نشاطات خارجية</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/5.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">المتعة مع الأخوة</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/6.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">وقت المتعة</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/7.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">أجواء طبيعية</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/8.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">اللعب مع الأخوة</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/9.jpg" alt="كلب في الحديقة" loading="lazy" width="300" height="200"><div class="gallery-caption">أجمل اللحظات</div></div>
+            </div>
+            <div class="other-facilities-title" style="margin-top:3rem;"><h3>غرف إقامة الكلاب</h3><p>رفاهية وإقامة فاخرة</p></div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/10.jpg" alt="غرفة VIP" loading="lazy" width="300" height="200"><div class="gallery-caption">غرفة VIP - الأكثر طلباً</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/11.jpg" alt="غرفة مكيفة" loading="lazy" width="300" height="200"><div class="gallery-caption">غرفة مكيفة بالكامل</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/20.jpg" alt="غرفة ترفيه" loading="lazy" width="300" height="200"><div class="gallery-caption">غرفة مع تلفزيون وترفيه</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/21.jpg" alt="غرفة عادية" loading="lazy" width="300" height="200"><div class="gallery-caption">غرفة كلب عادية</div></div>
+            </div>
+            <div class="other-facilities-title" style="margin-top:3rem;"><h3>خدماتنا المتنوعة</h3><p>عناية واهتمام بكلابكم</p></div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/12.jpg" alt="منطقة لعب داخلية" loading="lazy" width="300" height="200"><div class="gallery-caption">منطقة اللعب الداخلية</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/13.jpg" alt="ألعاب تفاعلية" loading="lazy" width="300" height="200"><div class="gallery-caption">ألعاب تفاعلية</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/14.jpg" alt="مساحة عشب خاصة" loading="lazy" width="300" height="200"><div class="gallery-caption">مساحة عشب خاصة</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/15.jpg" alt="جلسة تنظيف للكلب" loading="lazy" width="300" height="200"><div class="gallery-caption">جلسة تنظيف للكلب</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/16.jpg" alt="صالة الحلاقة" loading="lazy" width="300" height="200"><div class="gallery-caption">صالة الحلاقة والتجميل</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/17.jpg" alt="حفر حفرة بالرمل" loading="lazy" width="300" height="200"><div class="gallery-caption">حفر حفرة بالرمل</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/18.jpg" alt="تمشية الكلب في الغابات" loading="lazy" width="300" height="200"><div class="gallery-caption">تمشية الكلب في الغابات</div></div>
+                <div class="gallery-item" onclick="openModal(this)"><img src="images/19.jpg" alt="خدمة التوصيل" loading="lazy" width="300" height="200"><div class="gallery-caption">خدمة التوصيل من وإلى المكان</div></div>
+            </div>
+            <div class="gallery-note"><p>لمشاركة صور كلابكم معنا , يرجى التواصل معنا على بريدنا الإلكتروني info@lovinghomes.hk</p></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>LOVING HOMES</h4><p style="color:#aaa;line-height:1.6;">بيتهم الثاني... حيث الحب والرعاية. نقدم أفضل خدمات رعاية الكلاب في هونج كونج - الصين.</p></div>
+                <div class="footer-col"><h4>روابط سريعة</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="2.html">الخدمات</a></li><li><a href="3.html">الحزم</a></li><li><a href="4.html">تواصل معنا</a></li><li><a href="5.html">معرض الصور</a></li></ul></div>
+                <div class="footer-col"><h4>خدماتنا</h4><ul><li><a href="2.html">صالة حلاقة</a></li><li><a href="2.html">رعاية بيطرية</a></li><li><a href="2.html">خدمة نقل</a></li><li><a href="2.html">مناطق لعب</a></li></ul></div>
+                <div class="footer-col"><h4>معلومات الاتصال</h4><div class="footer-contact"><p>📍 منطقة الرفاهية، جزيرة هونج كونج - الصين</p><p>📞 +852 1234 5678</p><p>✉️ info@lovinghomes.hk</p></div></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 Loving Homes - هونج كونج، الصين. جميع الحقوق محفوظة.</p></div>
+        </div>
+    </footer>
+    <div class="access-toggle" id="accessToggle">⚙️</div>
+    <div class="access-panel" id="accessPanel">
+        <button class="access-btn" id="zoomIn">🔍+ تكبير</button>
+        <button class="access-btn" id="zoomOut">🔍- تصغير</button>
+        <button class="access-btn" id="resetZoom">🔄 إعادة تعيين</button><hr>
+        <button class="access-btn" id="darkMode">🌙 ليلي</button>
+        <button class="access-btn" id="lightMode">☀️ نهاري</button><hr>
+        <button class="access-btn" id="translateBtn">🌐 ترجمة</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const captionText = document.getElementById('caption');
+        function openModal(element) {
+            const img = element.querySelector('img');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        function closeModalOnClick(event) {
+            if (event.target === modal) closeModal();
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+        });
+    </script>
+</body>
+</html>
