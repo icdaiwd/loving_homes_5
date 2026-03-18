@@ -2184,7 +2184,6 @@ h2:after {
     display: inline-block;
     text-align: center;
 }
-
 .nav-links a:hover {
     color: var(--gold-light);
     border-bottom-color: var(--gold);
